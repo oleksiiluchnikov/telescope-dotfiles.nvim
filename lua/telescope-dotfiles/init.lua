@@ -12,7 +12,7 @@ function M.configs(opts)
 	local nvim_config_path = vim.fn.stdpath("config")
 	local nvim_config_plugins_dir_path = nvim_config_path .. "/lua/user/plugins"
 
-  ---Get the list of plugin configs
+	---Get the list of plugin configs
 	---@return table<string, string>
 	local function get_plugin_configs()
 		local plugins = {}
@@ -38,7 +38,7 @@ function M.configs(opts)
 	---@type table<string, string>
 	local configs_list = get_plugin_configs()
 
-  ---Open the selected config file
+	---Open the selected config file
 	local function enter(bufnr)
 		local selected = actions_state.get_selected_entry()
 		local path = nvim_config_plugins_dir_path .. "/" .. selected.value .. ".lua"
